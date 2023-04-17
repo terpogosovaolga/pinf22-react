@@ -1,24 +1,21 @@
 import "./style/style.css";
 import Header from "./components/Header";
-import Filters from "./components/Filters";
-
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import { Routes, Route } from "react-router-dom";
+import NotFound from "./pages/NotFound";
 function App() {
-  console.log("App!");
-
+  console.log("rerender App");
   return (
     <>
       <Header />
-
-      <main>
-        <div className="container">
-          <h2>КАТАЛОГ ТУРОВ</h2>
-          <Filters
-            categories={["все", "по россии", "горящие"]}
-            activeIndex={0}
-          />
-          {/* { Filters(a, b, c) } */}
-        </div>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

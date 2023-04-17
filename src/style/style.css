@@ -154,7 +154,7 @@ section.tours article .photo {
     border-radius: 2rem 2rem 0 0;
     position: relative
 }
-section.tours article .photo i {
+section.tours article .photo svg {
     position: absolute;
     top: 1rem;
     right: 1rem;
